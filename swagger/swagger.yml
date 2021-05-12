@@ -1,0 +1,1434 @@
+swagger: "2.0"
+info:
+  title: beego Test API
+  description: beego has a very cool tools to autogenerate documents for your API
+  version: 1.0.0
+  termsOfService: http://beego.me/
+  contact:
+    email: astaxie@gmail.com
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+basePath: /v1
+paths:
+  /asignacion_atencion_medica/:
+    get:
+      tags:
+      - asignacion_atencion_medica
+      description: get AsignacionAtencionMedica
+      operationId: AsignacionAtencionMedicaController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.AsignacionAtencionMedica'
+        "404":
+          description: not found resource
+    post:
+      tags:
+      - asignacion_atencion_medica
+      description: create AsignacionAtencionMedica
+      operationId: AsignacionAtencionMedicaController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for AsignacionAtencionMedica content
+        required: true
+        schema:
+          $ref: '#/definitions/models.AsignacionAtencionMedica'
+      responses:
+        "201":
+          description: '{int} models.AsignacionAtencionMedica'
+        "400":
+          description: the request contains incorrect syntax
+  /asignacion_atencion_medica/{id}:
+    get:
+      tags:
+      - asignacion_atencion_medica
+      description: get AsignacionAtencionMedica by id
+      operationId: AsignacionAtencionMedicaController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.AsignacionAtencionMedica'
+        "404":
+          description: not found resource
+    put:
+      tags:
+      - asignacion_atencion_medica
+      description: update the AsignacionAtencionMedica
+      operationId: AsignacionAtencionMedicaController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for AsignacionAtencionMedica content
+        required: true
+        schema:
+          $ref: '#/definitions/models.AsignacionAtencionMedica'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.AsignacionAtencionMedica'
+        "400":
+          description: the request contains incorrect syntax
+    delete:
+      tags:
+      - asignacion_atencion_medica
+      description: delete the AsignacionAtencionMedica
+      operationId: AsignacionAtencionMedicaController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "404":
+          description: not found resource
+  /asignacion_solicitud/:
+    get:
+      tags:
+      - asignacion_solicitud
+      description: get AsignacionSolicitud
+      operationId: AsignacionSolicitudController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.AsignacionSolicitud'
+        "404":
+          description: not found resource
+    post:
+      tags:
+      - asignacion_solicitud
+      description: create AsignacionSolicitud
+      operationId: AsignacionSolicitudController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for AsignacionSolicitud content
+        required: true
+        schema:
+          $ref: '#/definitions/models.AsignacionSolicitud'
+      responses:
+        "201":
+          description: '{int} models.AsignacionSolicitud'
+        "400":
+          description: the request contains incorrect syntax
+  /asignacion_solicitud/{id}:
+    get:
+      tags:
+      - asignacion_solicitud
+      description: get AsignacionSolicitud by id
+      operationId: AsignacionSolicitudController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.AsignacionSolicitud'
+        "404":
+          description: not found resource
+    put:
+      tags:
+      - asignacion_solicitud
+      description: update the AsignacionSolicitud
+      operationId: AsignacionSolicitudController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for AsignacionSolicitud content
+        required: true
+        schema:
+          $ref: '#/definitions/models.AsignacionSolicitud'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.AsignacionSolicitud'
+        "400":
+          description: the request contains incorrect syntax
+    delete:
+      tags:
+      - asignacion_solicitud
+      description: delete the AsignacionSolicitud
+      operationId: AsignacionSolicitudController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "404":
+          description: not found resource
+  /dato_solicitud/:
+    get:
+      tags:
+      - dato_solicitud
+      description: get DatoSolicitud
+      operationId: DatoSolicitudController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.DatoSolicitud'
+        "404":
+          description: not found resource
+    post:
+      tags:
+      - dato_solicitud
+      description: create DatoSolicitud
+      operationId: DatoSolicitudController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for DatoSolicitud content
+        required: true
+        schema:
+          $ref: '#/definitions/models.DatoSolicitud'
+      responses:
+        "201":
+          description: '{int} models.DatoSolicitud'
+        "400":
+          description: the request contains incorrect syntax
+  /dato_solicitud/{id}:
+    get:
+      tags:
+      - dato_solicitud
+      description: get DatoSolicitud by id
+      operationId: DatoSolicitudController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.DatoSolicitud'
+        "404":
+          description: not found resource
+    put:
+      tags:
+      - dato_solicitud
+      description: update the DatoSolicitud
+      operationId: DatoSolicitudController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for DatoSolicitud content
+        required: true
+        schema:
+          $ref: '#/definitions/models.DatoSolicitud'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.DatoSolicitud'
+        "400":
+          description: the request contains incorrect syntax
+    delete:
+      tags:
+      - dato_solicitud
+      description: delete the DatoSolicitud
+      operationId: DatoSolicitudController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "404":
+          description: not found resource
+  /motivo_aval/:
+    get:
+      tags:
+      - motivo_aval
+      description: get MotivoAval
+      operationId: MotivoAvalController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.MotivoAval'
+        "404":
+          description: not found resource
+    post:
+      tags:
+      - motivo_aval
+      description: create MotivoAval
+      operationId: MotivoAvalController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for MotivoAval content
+        required: true
+        schema:
+          $ref: '#/definitions/models.MotivoAval'
+      responses:
+        "201":
+          description: '{int} models.MotivoAval'
+        "400":
+          description: the request contains incorrect syntax
+  /motivo_aval/{id}:
+    get:
+      tags:
+      - motivo_aval
+      description: get MotivoAval by id
+      operationId: MotivoAvalController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.MotivoAval'
+        "404":
+          description: not found resource
+    put:
+      tags:
+      - motivo_aval
+      description: update the MotivoAval
+      operationId: MotivoAvalController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for MotivoAval content
+        required: true
+        schema:
+          $ref: '#/definitions/models.MotivoAval'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.MotivoAval'
+        "400":
+          description: the request contains incorrect syntax
+    delete:
+      tags:
+      - motivo_aval
+      description: delete the MotivoAval
+      operationId: MotivoAvalController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "404":
+          description: not found resource
+  /persona/:
+    get:
+      tags:
+      - persona
+      description: get Persona
+      operationId: PersonaController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Persona'
+        "404":
+          description: not found resource
+    post:
+      tags:
+      - persona
+      description: create Persona
+      operationId: PersonaController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for Persona content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Persona'
+      responses:
+        "201":
+          description: '{int} models.Persona'
+        "400":
+          description: the request contains incorrect syntax
+  /persona/{id}:
+    get:
+      tags:
+      - persona
+      description: get Persona by id
+      operationId: PersonaController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Persona'
+        "404":
+          description: not found resource
+    put:
+      tags:
+      - persona
+      description: update the Persona
+      operationId: PersonaController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for Persona content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Persona'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Persona'
+        "400":
+          description: the request contains incorrect syntax
+    delete:
+      tags:
+      - persona
+      description: delete the Persona
+      operationId: PersonaController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "404":
+          description: not found resource
+  /solicitud_servicio/:
+    get:
+      tags:
+      - solicitud_servicio
+      description: get SolicitudServicio
+      operationId: SolicitudServicioController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.SolicitudServicio'
+        "404":
+          description: not found resource
+    post:
+      tags:
+      - solicitud_servicio
+      description: create SolicitudServicio
+      operationId: SolicitudServicioController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for SolicitudServicio content
+        required: true
+        schema:
+          $ref: '#/definitions/models.SolicitudServicio'
+      responses:
+        "201":
+          description: '{int} models.SolicitudServicio'
+        "400":
+          description: the request contains incorrect syntax
+  /solicitud_servicio/{id}:
+    get:
+      tags:
+      - solicitud_servicio
+      description: get SolicitudServicio by id
+      operationId: SolicitudServicioController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.SolicitudServicio'
+        "404":
+          description: not found resource
+    put:
+      tags:
+      - solicitud_servicio
+      description: update the SolicitudServicio
+      operationId: SolicitudServicioController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for SolicitudServicio content
+        required: true
+        schema:
+          $ref: '#/definitions/models.SolicitudServicio'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.SolicitudServicio'
+        "400":
+          description: the request contains incorrect syntax
+    delete:
+      tags:
+      - solicitud_servicio
+      description: delete the SolicitudServicio
+      operationId: SolicitudServicioController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "404":
+          description: not found resource
+  /soporte_aval/:
+    get:
+      tags:
+      - soporte_aval
+      description: get SoporteAval
+      operationId: SoporteAvalController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.SoporteAval'
+        "404":
+          description: not found resource
+    post:
+      tags:
+      - soporte_aval
+      description: create SoporteAval
+      operationId: SoporteAvalController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for SoporteAval content
+        required: true
+        schema:
+          $ref: '#/definitions/models.SoporteAval'
+      responses:
+        "201":
+          description: '{int} models.SoporteAval'
+        "400":
+          description: the request contains incorrect syntax
+  /soporte_aval/{id}:
+    get:
+      tags:
+      - soporte_aval
+      description: get SoporteAval by id
+      operationId: SoporteAvalController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.SoporteAval'
+        "404":
+          description: not found resource
+    put:
+      tags:
+      - soporte_aval
+      description: update the SoporteAval
+      operationId: SoporteAvalController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for SoporteAval content
+        required: true
+        schema:
+          $ref: '#/definitions/models.SoporteAval'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.SoporteAval'
+        "400":
+          description: the request contains incorrect syntax
+    delete:
+      tags:
+      - soporte_aval
+      description: delete the SoporteAval
+      operationId: SoporteAvalController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "404":
+          description: not found resource
+  /subtipo_servicio/:
+    get:
+      tags:
+      - subtipo_servicio
+      description: get SubtipoServicio
+      operationId: SubtipoServicioController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.SubtipoServicio'
+        "404":
+          description: not found resource
+    post:
+      tags:
+      - subtipo_servicio
+      description: create SubtipoServicio
+      operationId: SubtipoServicioController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for SubtipoServicio content
+        required: true
+        schema:
+          $ref: '#/definitions/models.SubtipoServicio'
+      responses:
+        "201":
+          description: '{int} models.SubtipoServicio'
+        "400":
+          description: the request contains incorrect syntax
+  /subtipo_servicio/{id}:
+    get:
+      tags:
+      - subtipo_servicio
+      description: get SubtipoServicio by id
+      operationId: SubtipoServicioController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.SubtipoServicio'
+        "404":
+          description: not found resource
+    put:
+      tags:
+      - subtipo_servicio
+      description: update the SubtipoServicio
+      operationId: SubtipoServicioController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for SubtipoServicio content
+        required: true
+        schema:
+          $ref: '#/definitions/models.SubtipoServicio'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.SubtipoServicio'
+        "400":
+          description: the request contains incorrect syntax
+    delete:
+      tags:
+      - subtipo_servicio
+      description: delete the SubtipoServicio
+      operationId: SubtipoServicioController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "404":
+          description: not found resource
+  /tipo_atencion/:
+    get:
+      tags:
+      - tipo_atencion
+      description: get TipoAtencion
+      operationId: TipoAtencionController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.TipoAtencion'
+        "404":
+          description: not found resource
+    post:
+      tags:
+      - tipo_atencion
+      description: create TipoAtencion
+      operationId: TipoAtencionController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for TipoAtencion content
+        required: true
+        schema:
+          $ref: '#/definitions/models.TipoAtencion'
+      responses:
+        "201":
+          description: '{int} models.TipoAtencion'
+        "400":
+          description: the request contains incorrect syntax
+  /tipo_atencion/{id}:
+    get:
+      tags:
+      - tipo_atencion
+      description: get TipoAtencion by id
+      operationId: TipoAtencionController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.TipoAtencion'
+        "404":
+          description: not found resource
+    put:
+      tags:
+      - tipo_atencion
+      description: update the TipoAtencion
+      operationId: TipoAtencionController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for TipoAtencion content
+        required: true
+        schema:
+          $ref: '#/definitions/models.TipoAtencion'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.TipoAtencion'
+        "400":
+          description: the request contains incorrect syntax
+    delete:
+      tags:
+      - tipo_atencion
+      description: delete the TipoAtencion
+      operationId: TipoAtencionController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "404":
+          description: not found resource
+  /tipo_servicio/:
+    get:
+      tags:
+      - tipo_servicio
+      description: get TipoServicio
+      operationId: TipoServicioController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.TipoServicio'
+        "404":
+          description: not found resource
+    post:
+      tags:
+      - tipo_servicio
+      description: create TipoServicio
+      operationId: TipoServicioController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for TipoServicio content
+        required: true
+        schema:
+          $ref: '#/definitions/models.TipoServicio'
+      responses:
+        "201":
+          description: '{int} models.TipoServicio'
+        "400":
+          description: the request contains incorrect syntax
+  /tipo_servicio/{id}:
+    get:
+      tags:
+      - tipo_servicio
+      description: get TipoServicio by id
+      operationId: TipoServicioController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.TipoServicio'
+        "404":
+          description: not found resource
+    put:
+      tags:
+      - tipo_servicio
+      description: update the TipoServicio
+      operationId: TipoServicioController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for TipoServicio content
+        required: true
+        schema:
+          $ref: '#/definitions/models.TipoServicio'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.TipoServicio'
+        "400":
+          description: the request contains incorrect syntax
+    delete:
+      tags:
+      - tipo_servicio
+      description: delete the TipoServicio
+      operationId: TipoServicioController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "404":
+          description: not found resource
+definitions:
+  models.AsignacionAtencionMedica:
+    title: AsignacionAtencionMedica
+    type: object
+    properties:
+      AsignacionSolicitudId:
+        $ref: '#/definitions/models.AsignacionSolicitud'
+      FechaCreacion:
+        type: string
+      FechaModificacion:
+        type: string
+      HojaHistoriaId:
+        type: integer
+        format: int64
+      Id:
+        type: integer
+        format: int64
+  models.AsignacionSolicitud:
+    title: AsignacionSolicitud
+    type: object
+    properties:
+      AsesorId:
+        type: integer
+        format: int64
+      FechaAsignacion:
+        type: string
+        format: datetime
+      FechaCreacion:
+        type: string
+      FechaFinAtencion:
+        type: string
+        format: datetime
+      FechaInicioAtencion:
+        type: string
+        format: datetime
+      FechaModificacion:
+        type: string
+      Id:
+        type: integer
+        format: int64
+      Observaciones:
+        type: string
+      PeriodoId:
+        type: integer
+        format: int64
+      SolicitudServicioId:
+        $ref: '#/definitions/models.SolicitudServicio'
+  models.DatoSolicitud:
+    title: DatoSolicitud
+    type: object
+    properties:
+      AsesorPreferenciaId:
+        type: integer
+        format: int64
+      FechaCreacion:
+        type: string
+      FechaModificacion:
+        type: string
+      Id:
+        type: integer
+        format: int64
+      Observaciones:
+        type: string
+      SolicitudServicioId:
+        $ref: '#/definitions/models.SolicitudServicio'
+      TipoAtencionId:
+        $ref: '#/definitions/models.TipoAtencion'
+  models.MotivoAval:
+    title: MotivoAval
+    type: object
+    properties:
+      Activo:
+        type: boolean
+      CodigoAbreviacion:
+        type: string
+      Descripcion:
+        type: string
+      FechaCreacion:
+        type: string
+      FechaModificacion:
+        type: string
+      Id:
+        type: integer
+        format: int64
+      Nombre:
+        type: string
+      NumeroOrden:
+        type: number
+        format: double
+  models.Persona:
+    title: Persona
+    type: object
+    properties:
+      CodigoEstudiantil:
+        type: string
+      Correo:
+        type: string
+      DependenciaId:
+        type: integer
+        format: int64
+      Eps:
+        type: string
+      EstadoCondor:
+        type: string
+      Estamento:
+        type: string
+      FacultadId:
+        type: integer
+        format: int64
+      FechaNacimiento:
+        type: string
+        format: datetime
+      Genero:
+        type: string
+      Id:
+        type: integer
+        format: int64
+      NumeroIdentificacion:
+        type: string
+      PrimerApellido:
+        type: string
+      PrimerNombre:
+        type: string
+      SegundoApellido:
+        type: string
+      SegundoNombre:
+        type: string
+      Telefono:
+        type: string
+      TipoIdentificacion:
+        type: string
+  models.SolicitudServicio:
+    title: SolicitudServicio
+    type: object
+    properties:
+      AceptaTerminos:
+        type: boolean
+      DatosPersonaSolicitud:
+        type: string
+      FechaCreacion:
+        type: string
+      FechaModificacion:
+        type: string
+      FechaSolicitud:
+        type: string
+        format: datetime
+      Id:
+        type: integer
+        format: int64
+      PersonaId:
+        type: integer
+        format: int64
+      SubtipoServicioId:
+        $ref: '#/definitions/models.SubtipoServicio'
+  models.SoporteAval:
+    title: SoporteAval
+    type: object
+    properties:
+      DocumentoId:
+        type: integer
+        format: int64
+      FechaCreacion:
+        type: string
+      FechaModificacion:
+        type: string
+      Id:
+        type: integer
+        format: int64
+      MotivoAvalId:
+        $ref: '#/definitions/models.MotivoAval'
+      SolicitudServicioId:
+        $ref: '#/definitions/models.SolicitudServicio'
+  models.SubtipoServicio:
+    title: SubtipoServicio
+    type: object
+    properties:
+      Activo:
+        type: boolean
+      CodigoAbreviacion:
+        type: string
+      Descripcion:
+        type: string
+      FechaCreacion:
+        type: string
+      FechaModificacion:
+        type: string
+      Id:
+        type: integer
+        format: int64
+      Nombre:
+        type: string
+      NumeroOrden:
+        type: number
+        format: double
+      TipoServicioId:
+        $ref: '#/definitions/models.TipoServicio'
+  models.TipoAtencion:
+    title: TipoAtencion
+    type: object
+    properties:
+      Activo:
+        type: boolean
+      CodigoAbreviacion:
+        type: string
+      Descripcion:
+        type: string
+      FechaCreacion:
+        type: string
+      FechaModificacion:
+        type: string
+      Id:
+        type: integer
+        format: int64
+      Nombre:
+        type: string
+      NumeroOrden:
+        type: number
+        format: double
+  models.TipoServicio:
+    title: TipoServicio
+    type: object
+    properties:
+      Activo:
+        type: boolean
+      CodigoAbreviacion:
+        type: string
+      Descripcion:
+        type: string
+      FechaCreacion:
+        type: string
+      FechaModificacion:
+        type: string
+      Id:
+        type: integer
+        format: int64
+      Nombre:
+        type: string
+      NumeroOrden:
+        type: number
+        format: double
+tags:
+- name: persona
+  description: |
+    PersonaController operations for Persona
+- name: asignacion_atencion_medica
+  description: |
+    AsignacionAtencionMedicaController operations for AsignacionAtencionMedica
+- name: motivo_aval
+  description: |
+    MotivoAvalController operations for MotivoAval
+- name: asignacion_solicitud
+  description: |
+    AsignacionSolicitudController operations for AsignacionSolicitud
+- name: soporte_aval
+  description: |
+    SoporteAvalController operations for SoporteAval
+- name: solicitud_servicio
+  description: |
+    SolicitudServicioController operations for SolicitudServicio
+- name: tipo_servicio
+  description: |
+    TipoServicioController operations for TipoServicio
+- name: subtipo_servicio
+  description: |
+    SubtipoServicioController operations for SubtipoServicio
+- name: tipo_atencion
+  description: |
+    TipoAtencionController operations for TipoAtencion
+- name: dato_solicitud
+  description: |
+    DatoSolicitudController operations for DatoSolicitud
